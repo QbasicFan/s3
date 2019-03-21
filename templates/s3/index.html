@@ -5,18 +5,24 @@
 <!-- Content -->
 <div class="w3-content" style="max-width:1100px;margin-top:80px;margin-bottom:80px">
 
+
+<section id="title">    
   <div class="w3-panel">
     <h1><b>MARKETING</b></h1>
+    <h2>Landing page by afrodoo</h2>
   </div>
+</section>
 
   <!-- Slideshow -->
+<section id="slideshow">
+
   <div class="w3-container">
 
     {% for p in fr %}
     <div class="w3-display-container mySlides">
-      <img src="{{ p.image.url }}" style="width:100%">
+      <img src="{{ p.image.url }}" style="width:100%" alt="{{ p.alt }}">
       <div class="{{ p.position }} w3-container w3-padding-32">
-        <span class="w3-white w3-padding-large w3-animate-bottom">{{ p.text }}</span>
+        <em class="w3-white w3-padding-large w3-animate-bottom">{{ p.text }}</em>
       </div>
     </div>
     {% endfor %}
@@ -36,56 +42,58 @@
       </div>
     </div>
   </div>
+</section>
+
+
 
   <!-- Grid -->
+<section id="section1">  
   <div class="w3-row w3-container">
     <div class="w3-center w3-padding-64">
-      <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Section 1</span>
+      <mark class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Section 1</mark>
     </div>
 
      {% for p in sec1 %}
     <div class="w3-col l3 m6 {{ p.color }} w3-container w3-padding-16">
-      <h3>{{ p.title }}</h3>
-      <p>{{ p.text }}</p>
+      <h2>{{ p.title }}</h2>
+      <blockquote>{{ p.text }}</blockquote>
     </div>
 {% endfor %}
-
-
-
   </div>
-
+</section>
 
 
     <!-- Grid -->
+
+<section id="section2">    
   <div class="w3-row-padding" id="about">
 
     <div class="w3-center w3-padding-64">
-      <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Section 2</span>
+      <mark class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Section 2</mark>
     </div>
 
  {% for p in sec2 %}
     <div class="w3-third w3-margin-bottom">
       <div class="w3-card-4">
-        <img src="{{ p.image.url }}" alt="John" style="width:100%">
+        <img src="{{ p.image.url }}" alt="John" style="width:100%" alt="{{ p.alt }}">
         <div class="w3-container">
-          <h3>{{ p.title }}</h3>
-          <p class="w3-opacity">{{ p.text }}</p>
+          <h2>{{ p.title }}</h2>
+          <p><em class="w3-opacity">{{ p.text }}</em></p>
           <p>{{ p.subText }}</p>
           <p><button class="w3-button w3-light-grey w3-block">Contact</button></p>
         </div>
       </div>
     </div>
 {% endfor %}
-
-
-  </div>
-
+ </div>
+</section>
 
 
 
   <!-- Contact -->
+<section id="contact">  
   <div class="w3-center w3-padding-64" id="contact">
-    <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Contact Us</span>
+    <h2 class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16">Contact Us</h2>
   </div>
 
   <form class="w3-container" action="/action_page.php" target="_blank">
@@ -107,7 +115,11 @@
     </div>
     <button type="submit" class="w3-button w3-block w3-black">Send</button>
   </form>
+</section>
 
+
+
+
+<!-- end of main -->  
 </div>
-
 {% endblock %}
