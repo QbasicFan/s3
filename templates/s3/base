@@ -1,12 +1,49 @@
-
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#"></html>
 <!doctype html>
 {% load pages_tags mezzanine_tags i18n staticfiles %}
 
 <!DOCTYPE html>
 <html>
-<title>Afrodoo Template S3</title>
+<title>Afrodoo Template S3 | {{ seo.title }}</title>
+<!-- SEO -->
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="{{ seo.description }}">
+<meta name="keywords" content="{{ seo.keywords }}">
+<meta name="author" content="{{ seo.author }}">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- facebook -->
+<meta property="og:locale" content="en_US"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="{{ seo.title }}"/>
+<meta property="og:url" content="{{ seo.url }}"/>
+<meta property="og:site_name" content="{{ seo.siteName }}"/>
+
+<!-- twitter -->
+<meta name="twitter:card" content="{{ seo.image }}"/>
+<meta name="twitter:title" content="{{ seo.title }}"/>
+<meta name="twitter:creator" content="@{{ seo.twitterCreator }}"/>
+
+<!-- google  -->
+
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "{{ seo.url }}",
+      "name": "{{ seo.author }}",
+      "image": "{{ seo.image }}",
+      "description": "{{ seo.description }}",    
+    }
+</script>
+
+<!-- end SEO -->
+
+
+
+
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -18,34 +55,38 @@ html,body,h1,h2,h3,h4 {font-family:"Lato", sans-serif}
 </style>
 <body>
 
-<!-- Links (sit on top) -->
-<div class="w3-top">
-  <div class="w3-row w3-large w3-light-grey">
-    <div class="w3-col s3">
-      <a href="#" class="w3-button w3-block">Home</a>
-    </div>
-    <div class="w3-col s3">
-      <a href="#plans" class="w3-button w3-block">Section 1</a>
-    </div>
-    <div class="w3-col s3">
-      <a href="#about" class="w3-button w3-block">Section 2</a>
-    </div>
-    <div class="w3-col s3">
-      <a href="#contact" class="w3-button w3-block">Contact</a>
-    </div>
-  </div>
-</div>
 
+<header>    
+    <nav>    
+        <div class="w3-top">
+            <div class="w3-row w3-large w3-light-grey">
+                <div class="w3-col s3">
+                <a href="#" class="w3-button w3-block">Home</a>
+                </div>
+                <div class="w3-col s3">
+                <a href="#plans" class="w3-button w3-block">Section 1</a>
+                </div>
+                <div class="w3-col s3">
+                <a href="#about" class="w3-button w3-block">Section 2</a>
+                </div>
+                <div class="w3-col s3">
+                <a href="#contact" class="w3-button w3-block">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
 {% block content %}
 {% endblock %}
-
+</main>
 
 
 
 <!-- Footer -->
 
 <footer class="w3-container w3-padding-32 w3-light-grey w3-center">
-  <h4>Footer</h4>
   <a href="#" class="w3-button w3-black w3-margin"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
   <div class="w3-xlarge w3-section">
     <i class="fa fa-facebook-official w3-hover-opacity"></i>
@@ -91,4 +132,3 @@ function showDivs(n) {
 
 </body>
 </html>
-
