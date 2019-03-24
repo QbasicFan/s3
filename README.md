@@ -47,6 +47,9 @@ python manage.py makemigrations s3
 python manage.py migrate s3
 
 6) re-runserver
+**********************************
+ToDo
+
 
 
 **********************
