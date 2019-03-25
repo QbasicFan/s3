@@ -49,9 +49,10 @@ python manage.py migrate s3
 6) re-runserver
 **********************************
 ToDo
-
-
-
+nothing more today ....
+normal w3.css = 87.4 kb
+minifyed w3.css = 9.7 kb
+- 88.9 %
 **********************
 
 If you like this starter theme, want help with your django projects or want more advanced django templates visit my website. http://www.philserme.com/
