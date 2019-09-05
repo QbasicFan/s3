@@ -1,4 +1,6 @@
-# s3
+### s3
+Landing page django mezzanine template with custom and optimized SEO 
+
 Simple template 3
 Template starter
 
