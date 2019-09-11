@@ -20,7 +20,8 @@ Section2s
 
 ![alt text](https://github.com/QbasicFan/s3/blob/master/ss3.png)
 
-
+## Todo 
+[ ] Add SEO model
 
 *****************
 Install
